@@ -23,7 +23,7 @@ offset = get_timezone_offset()
 timestamp = now.strftime(f'%d_%B_%Y_%H:%M (UTC{offset})')
 
 # Write the numbers and timestamp to a CSV file with animal names as headers
-with open(f'data_{timestamp}.csv', 'w', newline='') as csvfile:
+with open(f'data.csv', 'w', newline='') as csvfile:
     writer = csv.writer(csvfile)
     writer.writerow(['Created on ' + str(timestamp)])
     writer.writerow(headers)

@@ -13,3 +13,11 @@ jobs:
 
     - name: Run script
       run: python TestScript.py
+
+    - name: Commit results
+      run: |
+        git config --global user.name "ajinkya-kulkarni"
+        git config --global user.email "kulkajinkya@gmail.com"
+        git add data.csv
+        git commit -m "Update data.csv"
+        git push
